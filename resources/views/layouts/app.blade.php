@@ -23,9 +23,6 @@
                     <a href="" class="p-6 " >Home</a>
                 </li>
                 <li>
-                    <a href="" class="p-6 " >Dashboard</a>
-                </li>
-                <li>
                     <a href="" class="p-6 " >Post</a>
                 </li>
             </ul>
