@@ -3,6 +3,7 @@
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\PostLikeController;
 use App\Http\Controllers\registestController;
+use App\Http\Controllers\UserPostController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,6 +20,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/users/{user:id}/posts', [UserPostController::class, 'index'])->name('user.posts');
+
 
 Route::get('/registest', [registestController::class, 'index'])->name('registest');
 Route::post('/registest', [registestController::class, 'store']);
