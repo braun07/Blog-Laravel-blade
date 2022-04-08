@@ -2,7 +2,7 @@
     <x-auth-card>
         <x-slot name="logo">
             <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
+                <x-application-logo class="w-32 h-32" />
             </a>
         </x-slot>
 
@@ -50,7 +50,7 @@
                     {{ __('Already registered?') }}
                 </a>
 
-                <x-button class="ml-4">
+                <x-button class="ml-4 bg-yellow-500 hover:bg-yellow-600">
                     {{ __('Register') }}
                 </x-button>
             </div>

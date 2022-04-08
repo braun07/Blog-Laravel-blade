@@ -16,26 +16,22 @@
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
     </head>
-    <body class="font-sans antialiased bg-gray-200">
-        <nav class="p-6 bg-white flex justify-between mb-6">
+    <body class="font-sans antialiased bg-amber-200">
+        <nav class="fixed bg-amber-50 shadow-md z-50 w-full px-5 py-2 flex justify-between items-center">
             <ul class="flex items-center">
+                <li>
+                    <x-application-logo class="h-14 w-14"/>
+                </li>
                 <li>
                     <a href="/" class="p-6" >Home</a>
                 </li>
                 <li>
-                    <a href="{{ route('posts')}}" class="p-6 " >Post</a>
+                    <a href="{{ route('posts')}}" class="p-6 " >Posts</a>
                 </li>
-                @if (Route::has('login'))
-                <li>
-                    @auth
-                    <a href="{{ url('/dashboard') }}" class="p-6 ">Dashboard</a>
-                    @endauth
-                </li>
-                @endif
             </ul>
 
             @if (Route::has('login'))
-                <div class="hidden fixed top-0 right-0 px-6 py-6 sm:block">
+                <div class="p-6 flex justify-between">
                     @auth
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
