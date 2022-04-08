@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\registestController;
 use Illuminate\Support\Facades\Route;
 
@@ -21,12 +22,11 @@ Route::get('/', function () {
 Route::get('/registest', [registestController::class, 'index'])->name('registest');
 Route::post('/registest', [registestController::class, 'store']);
 
-Route::get('/posts', function () {
-    return view('posts.index');
-});
+Route::get('/posts', [PostController::class, 'index'])->name('posts');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+})->middleware(['auth '])->name('dashboard');
 
 require __DIR__.'/auth.php';
