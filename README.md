@@ -1,4 +1,5 @@
 <div>
+    <h1>This is a Blog/Forum, that i build for fun in my free time</h1>
     <p>Home Page</p>
     <img src="https://user-images.githubusercontent.com/86969804/162543705-8f52f7f8-8d5e-4a9d-aa80-fda97c5c99f0.png"/>
     <p>Posts Page</p>
